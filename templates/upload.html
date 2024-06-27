@@ -1,0 +1,71 @@
+<html>
+   <head>
+      <style>
+         body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(120deg, #2980b9, #6dd5fa, #ffffff);
+            background-size: 600% 600%;
+            animation: gradientAnimation 10s ease infinite;
+            margin: 0;
+            padding: 0;
+         }
+
+         @keyframes gradientAnimation {
+            0% {
+               background-position: 0% 50%;
+            }
+            50% {
+               background-position: 100% 50%;
+            }
+            100% {
+               background-position: 0% 50%;
+            }
+         }
+
+         .container {
+            max-width: 400px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #ffffff;
+            border: 1px solid #cccccc;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+         }
+
+         h1 {
+            text-align: center;
+            color: black;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            margin-bottom: 30px;
+         }
+
+         input[type="file"] {
+            margin-bottom: 10px;
+         }
+
+         input[type="submit"] {
+            background-color: #ff4081;
+            color: #ffffff;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+         }
+
+         input[type="submit"]:hover {
+            background-color: #d81b60;
+         }
+      </style>
+   </head>
+   <body>
+      <div class="container">
+         <h1>Medical Image Fusion</h1>
+         <form action="/extra" method="POST" enctype="multipart/form-data">
+            <input type="file" name="file1" />
+            <input type="file" name="file2" />
+            <input type="submit" value="Upload" />
+         </form>
+      </div>
+   </body>
+</html>
